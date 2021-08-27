@@ -3,29 +3,29 @@
 using namespace std;
 void input(int a[], int n){
 	for(int i=0;i<n;i++){
-		cout<<"nhap gia tri phan tu a["<<i<<"]:";
-        cin>>a[i];	
+           cout<<"nhap gia tri phan tu a["<<i<<"]:";
+           cin>>a[i];	
         }
 }
 
 void output(int a[],int n){
 	int j;
 	for(j=0;j<n;j++){
-	        cout<<a[j];
-	        cout<<" ";
+	   cout<<a[j];
+	   cout<<" ";
 	}
 }
 
 int insertsort(int a[], int n){
 	int i;
         for(i=0;i<n;i++){
-	         int j=i-1;
-	         int index=a[i];
-	         int tam;
+	   int j=i-1;
+	   int index=a[i];
+	   int tam;
 		
-        while(a[j]>index&&j>=0){
-                 a[j+1]=a[j];
-                 j--;
+          while(a[j]>index&&j>=0){
+                a[j+1]=a[j];
+                j--;
 	}
 	a[j+1]=index;
 	}
