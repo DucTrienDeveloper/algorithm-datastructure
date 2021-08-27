@@ -5,25 +5,32 @@ void input(int a[], int n){
 	for(int i=0;i<n;i++){
 		cout<<"nhap gia tri phan tu a["<<i<<"]:";
         cin>>a[i];	
-}}
+        }
+}
+
 void output(int a[],int n){
-	for(int j=0;j<n;j++){
-		cout<<a[j];
-		cout<<" ";
-		}
+	int j;
+	for(j=0;j<n;j++){
+	        cout<<a[j];
+	        cout<<" ";
 	}
+}
+
 int insertsort(int a[], int n){
-    for(int i=0;i<n;i++){
-	 int j=i-1;
-	 int index=a[i];
-	 int tam;
-    while(a[j]>index&&j>=0){
-       a[j+1]=a[j];
-       j--;
+	int i;
+        for(i=0;i<n;i++){
+	         int j=i-1;
+	         int index=a[i];
+	         int tam;
+		
+        while(a[j]>index&&j>=0){
+                 a[j+1]=a[j];
+                 j--;
 	}
 	a[j+1]=index;
 	}
-}
+ }
+
 int main(){
 	int n;
 	cout<<"nhap n:";
@@ -31,5 +38,5 @@ int main(){
 	int a[n];
 	input(a,n);
 	insertsort(a,n);
-    output(a,n);
+        output(a,n);
 }
