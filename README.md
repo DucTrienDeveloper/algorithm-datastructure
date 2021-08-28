@@ -1,4 +1,4 @@
-# Algorithm-datastructure là kiến thức cần thiết,nền tảng cần phải có trong lập trình.
+# Algorithm-datastructure là kiến thức cần thiết,nền tảng cần phải có trong lập trình và nó giúp cho máy tính làm việc hiệu quả hơn.
 # Datastructrure là cấu trúc dữ liệu (array,stack,queue...) là cách mà chúng ta tổ chức chương trình sẽ theo hướng như thế nào và tổ chức lưu dữ liệu,với từng yêu cầu thì ta cần tổ chức datastructure khác nhau để máy tính có thể lưu trữ tổ chức dữ liệu phù hợp với yêu cầu và làm việc hiệu quả .
 # Algorithm là công thức để giải quyết cách xử lý dữ liệu và chúng tương tác trực tiếp lên Datastructure, các thuật toán có thể tương tác với 1 datastructure hoặc nhiều .
  - Để được gọi là thuật toán thì còn phải có đủ 3 yêu cầu cơ bản :
