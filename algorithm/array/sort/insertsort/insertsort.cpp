@@ -21,7 +21,7 @@ int  insertsort(int a[], int n)
 {
      int i;
      for(i = 0;i < n;i++){
-	 int j=i - 1;
+	 int j = i - 1;
 	 int index = a[i];
 	 int tam;
 		
