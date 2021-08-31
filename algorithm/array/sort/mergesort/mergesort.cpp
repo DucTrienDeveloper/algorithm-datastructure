@@ -20,16 +20,26 @@ void merge(int a[], int left, int m, int right)
     int i, j, k;
     int n1 = m - left + 1;
     int n2 =  right - m;
+    
+void merge(int a[], int left, int m, int r)
+{
+    int i, j, k;
+    int n1 = m - left + 1;
+    int n2 = right - m;
  
   
     int L[n1], R[n2];
  
    
     for (i = 0; i < n1; i++)
+
         L[i] = arr[left + i];
+
+        L[i] = a[left + i];
+
 	
     for (j = 0; j < n2; j++)
-        R[j] = arr[m + 1+ j];
+        R[j] = a[m + 1+ j];
  
    
     i = 0; 
@@ -40,12 +50,12 @@ void merge(int a[], int left, int m, int right)
     {
         if (L[i] <= R[j])
         {
-            arr[k] = L[i];
+            a[k] = L[i];
             i++;
         }
         else
         {
-            arr[k] = R[j];
+            a[k] = R[j];
             j++;
         }
         k++;
@@ -54,7 +64,7 @@ void merge(int a[], int left, int m, int right)
     /* Copy các phan tu còn lai cua mang L vào mang a neu có */
     while (i < n1)
     {
-        arr[k] = L[i];
+        a[k] = L[i];
         i++;
         k++;
     }
@@ -62,7 +72,7 @@ void merge(int a[], int left, int m, int right)
      /* Copy các phan tu còn lai cua mang L vào mang a neu có */
     while (j < n2)
     {
-        arr[k] = R[j];
+        a[k] = R[j];
         j++;
         k++;
     }
@@ -71,10 +81,16 @@ void merge(int a[], int left, int m, int right)
 /* l là chi so trái và r là chi so phai cua mang con duoc sap xep */
 void mergeSort(int a[], int left, int right)
 {
+
     if (left < right)
     {
         // Tuong tu (l+r)/2
         int m = left+(right-left)/2;
+
+    if (left< right)
+    {
+        // Tuong tu (l+r)/2
+        int m = left +(right - left)/2;
  
         // Goi hàm de quy tiep tuc chia dôi tung nua mang
         mergeSort(a , left, m);
