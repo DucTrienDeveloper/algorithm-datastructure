@@ -1,18 +1,22 @@
 #include<stdio.h>
 #include<iostream>
 using namespace std;
-void nhapmang(int a[], int n){
-	for(int j = 0;j < n; j++){
+void nhapmang(int a[], int n)
+{
+	for(int j = 0;j < n; j++)
+	{
 		cout<<" gia tri phan tu thu a["<<j<<"] la : ";
 		cin>>a[ j ];
 	}
 }
 
-void xuatmang(int a[],int n){
-	for (int i = 0;i < n; i++){
+void xuatmang(int a[],int n)
+{
+	for (int i = 0;i < n; i++)
+	{
 	    cout<<a[ i ];
 		cout<<" ";	
-		}
+	}
 }
 
 void merge(int a[], int left, int m, int right)
