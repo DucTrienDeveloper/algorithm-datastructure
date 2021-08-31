@@ -16,7 +16,7 @@ void output(int a[],int n){
       }
 }
 
-int bubblesort(int a[],int n){
+int  bubblesort(int a[],int n){
      for(int i = 0;i < n;i++){
 	    
 	 for(int j = 0;j < n - 1 - i;j++){
@@ -31,11 +31,11 @@ int bubblesort(int a[],int n){
 }
 
 int main(){
-    int n;
-    cout<<"nhap so phan tu vao mang :";
-    cin>>n;
-    int a[n];
-    input(a,n);
-    bubblesort(a,n);
-    output(a,n);
+     int n;
+     cout<<"nhap so phan tu vao mang :";
+     cin>>n;
+     int a[n];
+     input(a,n);
+     bubblesort(a,n);
+     output(a,n);
 }	
