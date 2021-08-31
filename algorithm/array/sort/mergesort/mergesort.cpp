@@ -28,13 +28,15 @@ void merge(int arr[], int l, int m, int r)
    
     for (i = 0; i < n1; i++)
         L[i] = arr[l + i];
+	
     for (j = 0; j < n2; j++)
         R[j] = arr[m + 1+ j];
  
    
     i = 0; 
     j = 0; // Khoi tao chi so bat dau cua mang con thu hai
-    k = l; 
+    k = l;
+	
     while (i < n1 && j < n2)
     {
         if (L[i] <= R[j])
@@ -50,7 +52,7 @@ void merge(int arr[], int l, int m, int r)
         k++;
     }
  
-    /* Copy các phan tu còn lai cua mang L vào mang a neu có */
+    /* Copy cÃ¡c phan tu cÃ²n lai cua mang L vÃ o mang a neu cÃ³ */
     while (i < n1)
     {
         arr[k] = L[i];
@@ -58,7 +60,7 @@ void merge(int arr[], int l, int m, int r)
         k++;
     }
  
-     /* Copy các phan tu còn lai cua mang L vào mang a neu có */
+     /* Copy cÃ¡c phan tu cÃ²n lai cua mang L vÃ o mang a neu cÃ³ */
     while (j < n2)
     {
         arr[k] = R[j];
@@ -67,7 +69,7 @@ void merge(int arr[], int l, int m, int r)
     }
 }
  
-/* l là chi so trái và r là chi so phai cua mang con duoc sap xep */
+/* l lÃ  chi so trÃ¡i vÃ  r lÃ  chi so phai cua mang con duoc sap xep */
 void mergeSort(int a[], int l, int r)
 {
     if (l < r)
@@ -75,7 +77,7 @@ void mergeSort(int a[], int l, int r)
         // Tuong tu (l+r)/2
         int m = l+(r-l)/2;
  
-        // Goi hàm de quy tiep tuc chia dôi tung nua mang
+        // Goi hÃ m de quy tiep tuc chia dÃ´i tung nua mang
         mergeSort(a , l, m);
         mergeSort(a , m+1, r);
  
@@ -88,7 +90,7 @@ int main(){
 	cout<<"nhap n : ";
 	cin>>n;
 	nhapmang (a , n);
-    mergeSort(a, 0, n-1 );
+        mergeSort(a, 0, n-1 );
 	xuatmang( a, n);
 	
 }
