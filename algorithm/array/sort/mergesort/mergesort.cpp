@@ -15,7 +15,7 @@ void xuatmang(int a[],int n){
 		}
 }
 
-void merge(int arr[], int left, int m, int right)
+void merge(int a[], int left, int m, int right)
 {
     int i, j, k;
     int n1 = m - left + 1;
