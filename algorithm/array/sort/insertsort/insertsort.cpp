@@ -2,16 +2,20 @@
 #include<conio.h>
 using namespace std;
 
-void input(int a[], int n){
-     for (int i = 0;i < n;i++){
+void input(int a[], int n)
+{
+     for (int i = 0;i < n;i++)
+     {
          cout<<"nhap gia tri phan tu a["<<i<<"]:";
          cin>>a[i];	
      }
 }
 
-void output(int a[],int n){
+void output(int a[],int n)
+{
      int j;
-     for(j = 0;j < n;j++){
+     for(j = 0;j < n;j++)
+     {
         cout<<a[j];
 	cout<<" ";
      }
@@ -20,12 +24,14 @@ void output(int a[],int n){
 int  insertsort(int a[], int n)
 {
      int i;
-     for(i = 0;i < n;i++){
+     for(i = 0;i < n;i++)
+     {
 	 int j = i - 1;
 	 int index = a[i];
 	 int tam;
 		
-         while(a[j] > index&&j >= 0){
+         while(a[j] > index&&j >= 0)
+	 {
                a[j + 1]=a[j];
                j--;
          }
