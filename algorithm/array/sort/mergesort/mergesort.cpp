@@ -97,12 +97,12 @@ void mergeSort(int a[], int left, int right)
 }
 int main()
 {
-	int n;
-	int a[n];
-	cout<<"nhap n : ";
-	cin>>n;
-	nhapmang (a , n);
+    int n;
+    int a[n];
+    cout<<"nhap n : ";
+    cin>>n;
+    nhapmang (a , n);
     mergeSort(a, 0, n-1 );
-	xuatmang( a, n);
+    xuatmang( a, n);
 	
 }
