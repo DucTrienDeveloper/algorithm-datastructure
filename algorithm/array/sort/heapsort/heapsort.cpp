@@ -2,14 +2,18 @@
 #include<conio.h>
 using namespace std;
 
-void nhapmang(int a[],int n){
-     for(int j = 0;j < n;j++){
+void nhapmang(int a[],int n)
+{
+     for(int j = 0;j < n;j++)
+     {
         cout<<"gia tri phan tu thu a["<<j<<"] la : ";
 	cin>>a[j];
      }
 }
-void xuatmang(int a[],int n){
-     for(int i = 0;i < n;i++){
+void xuatmang(int a[],int n)
+{
+     for(int i = 0;i < n;i++)
+     {
 	cout<<a[i];
         cout<<" ";	
      }
@@ -27,7 +31,8 @@ void heapify(int a[], int n, int i)
      if (right < n && a[right] > a[max])
          max=right;
  
-     if (max! = i) {             //gia tri lon nhat se dat o vi tri i
+     if (max! = i)            //gia tri lon nhat se dat o vi tri i
+     {           
          swap(a[i],a[max]);
  
          heapify(a,n,max);
@@ -37,18 +42,20 @@ void heapify(int a[], int n, int i)
 void heapSort(int a[],int n)
 {
    
-     for(int i = n / 2 - 1;i >= 0;i--)//tao nut
+     for(int i = n / 2 - 1;i >= 0;i--)    //tao nut
         heapify(a,n,i);
  
-     for(int i = n - 1;i > 0;i--) {
+     for(int i = n - 1;i > 0;i--)
+     {
         
         swap(a[0],a[i]);
         
         heapify(a,i,0);
-    }
+     }
 }
 
-int  main(){
+int  main()
+{
      int n;
      int a[n];
      cout<<"nhap n: ";
