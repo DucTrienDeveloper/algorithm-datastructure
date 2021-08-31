@@ -42,7 +42,8 @@ int  shellsort(int a[],int n)
            }
 	}
   }  
-int  main(){
+int  main()
+{
      int n;
      int a[n];
      cout<<"moi nhap so phan tu cua mang :";
