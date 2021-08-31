@@ -1,4 +1,3 @@
-#include<stdlib.h>
 #include<stdio.h>
 #include<iostream>
 using namespace std;
@@ -16,18 +15,18 @@ void xuatmang(int a[],int n){
 		}
 }
 
-void merge(int arr[], int l, int m, int r)
+void merge(int arr[], int left, int m, int right)
 {
     int i, j, k;
-    int n1 = m - l + 1;
-    int n2 =  r - m;
+    int n1 = m - left + 1;
+    int n2 =  right - m;
  
   
     int L[n1], R[n2];
  
    
     for (i = 0; i < n1; i++)
-        L[i] = arr[l + i];
+        L[i] = arr[left + i];
 	
     for (j = 0; j < n2; j++)
         R[j] = arr[m + 1+ j];
@@ -35,7 +34,7 @@ void merge(int arr[], int l, int m, int r)
    
     i = 0; 
     j = 0; // Khoi tao chi so bat dau cua mang con thu hai
-    k = l;
+    k = left;
 	
     while (i < n1 && j < n2)
     {
@@ -70,18 +69,18 @@ void merge(int arr[], int l, int m, int r)
 }
  
 /* l là chi so trái và r là chi so phai cua mang con duoc sap xep */
-void mergeSort(int a[], int l, int r)
+void mergeSort(int a[], int left, int right)
 {
-    if (l < r)
+    if (left < right)
     {
         // Tuong tu (l+r)/2
-        int m = l+(r-l)/2;
+        int m = left+(right-left)/2;
  
         // Goi hàm de quy tiep tuc chia dôi tung nua mang
-        mergeSort(a , l, m);
-        mergeSort(a , m+1, r);
+        mergeSort(a , left, m);
+        mergeSort(a , m+1, right);
  
-        merge(a , l, m, r);
+        merge(a , left, m, right);
     }
 }
 int main(){
@@ -90,7 +89,7 @@ int main(){
 	cout<<"nhap n : ";
 	cin>>n;
 	nhapmang (a , n);
-        mergeSort(a, 0, n-1 );
+    mergeSort(a, 0, n-1 );
 	xuatmang( a, n);
 	
 }
