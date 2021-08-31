@@ -21,11 +21,6 @@ void merge(int a[], int left, int m, int right)
     int n1 = m - left + 1;
     int n2 =  right - m;
     
-void merge(int a[], int left, int m, int r)
-{
-    int i, j, k;
-    int n1 = m - left + 1;
-    int n2 = right - m;
  
   
     int L[n1], R[n2];
@@ -33,7 +28,7 @@ void merge(int a[], int left, int m, int r)
    
     for (i = 0; i < n1; i++)
 
-        L[i] = arr[left + i];
+        L[i] = a[left + i];
 
         L[i] = a[left + i];
 
@@ -86,7 +81,7 @@ void mergeSort(int a[], int left, int right)
     {
         // Tuong tu (l+r)/2
         int m = left+(right-left)/2;
-
+    }
     if (left< right)
     {
         // Tuong tu (l+r)/2
@@ -98,8 +93,10 @@ void mergeSort(int a[], int left, int right)
  
         merge(a , left, m, right);
     }
+   
 }
-int main(){
+int main()
+{
 	int n;
 	int a[n];
 	cout<<"nhap n : ";
