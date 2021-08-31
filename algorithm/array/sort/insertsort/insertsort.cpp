@@ -6,7 +6,7 @@ void input(int a[], int n){
      for (int i = 0;i < n;i++){
          cout<<"nhap gia tri phan tu a["<<i<<"]:";
          cin>>a[i];	
-        }
+     }
 }
 
 void output(int a[],int n){
@@ -28,9 +28,9 @@ int  insertsort(int a[], int n)
          while(a[j] > index&&j >= 0){
                a[j + 1]=a[j];
                j--;
-	}
-	a[j + 1] = index;
-	}
+         }
+	 a[j + 1] = index;
+     }
  }
 
 int  main()
