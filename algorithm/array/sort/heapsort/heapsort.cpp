@@ -19,7 +19,7 @@ void xuatmang(int a[],int n)
      }
 }
 
-void heapify(int a[], int n, int i)
+void heap(int a[], int n, int i)
 {
      int max   = i; 
      int left  = 2 * i + 1; 
@@ -29,13 +29,13 @@ void heapify(int a[], int n, int i)
          max = left;
  
      if (right < n && a[right] > a[max])
-         max=right;
+         max = right;
  
      if (max! = i)            //gia tri lon nhat se dat o vi tri i
      {           
          swap(a[i],a[max]);
  
-         heapify(a,n,max);
+         heap(a,n,max);
      }
 }
 
@@ -43,14 +43,14 @@ void heapSort(int a[],int n)
 {
    
      for(int i = n / 2 - 1;i >= 0;i--)    //tao nut
-        heapify(a,n,i);
+        heap(a,n,i);
  
      for(int i = n - 1;i > 0;i--)
      {
         
         swap(a[0],a[i]);
         
-        heapify(a,i,0);
+        heap(a,i,0);
      }
 }
 
