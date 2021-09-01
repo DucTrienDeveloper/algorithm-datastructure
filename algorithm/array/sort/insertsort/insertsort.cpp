@@ -30,9 +30,9 @@ int  insertsort(int a[], int n)
 	 int index = a[i];
 	 int tam;
 		
-         while(a[j] > index&&j >= 0)
+         while(a[j] > index && j >= 0)
 	 {
-               a[j + 1]=a[j];
+               a[j + 1] = a[j];
                j--;
          }
 	 a[j + 1] = index;
