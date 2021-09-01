@@ -81,16 +81,16 @@ void mergeSort(int a[], int left, int right)
     if (left < right)
     {
         // Tuong tu (l+r)/2
-        int m = left+(right-left)/2;
+        int m = left + (right-left)/2;
     }
-    if (left< right)
+    if (left < right)
     {
-        // Tuong tu (l+r)/2
-        int m = left +(right - left)/2;
+        // Tuong tu (l + r)/2
+        int m = left + (right - left)/2;
  
         // Goi hàm de quy tiep tuc chia dôi tung nua mang
         mergeSort(a , left, m);
-        mergeSort(a , m+1, right);
+        mergeSort(a , m + 1, right);
  
         merge(a , left, m, right);
     }
@@ -103,7 +103,7 @@ int main()
     cout<<"nhap n : ";
     cin>>n;
     nhapmang (a , n);
-    mergeSort(a, 0, n-1 );
+    mergeSort(a, 0,n - 1);
     xuatmang( a, n);
 	
 }
