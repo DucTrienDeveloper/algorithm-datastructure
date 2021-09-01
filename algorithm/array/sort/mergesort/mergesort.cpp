@@ -33,9 +33,6 @@ void merge(int a[], int left, int m, int right)
     for (i = 0; i < n1; i++)
 
         L[i] = a[left + i];
-
-        L[i] = a[left + i];
-
 	
     for (j = 0; j < n2; j++)
         R[j] = a[m + 1+ j];
