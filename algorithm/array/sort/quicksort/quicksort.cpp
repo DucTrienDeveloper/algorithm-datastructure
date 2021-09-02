@@ -20,7 +20,6 @@ void output(int a[],int n)
      }
 }
 
-void quicksort(int a[],int left,int right );	
 void quicksort(int a[],int left,int right )
 {
 	if(left >= right) return;
