@@ -31,7 +31,7 @@ void heap(int a[], int n, int i)
      if (right < n && a[right] > a[max])
          max = right;
  
-     if (max! = i)            //gia tri lon nhat se dat o vi tri i
+     if (max != i)            //gia tri lon nhat se dat o vi tri i
      {           
          swap(a[i],a[max]);
  
