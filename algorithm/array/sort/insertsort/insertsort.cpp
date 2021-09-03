@@ -24,7 +24,7 @@ void output(int a[],int n)
 int  insertsort(int a[], int n)
 {
      int i;
-     for(i = 0;i < n;i++)
+     for(i = 1;i < n;i++)
      {
 	 int j = i - 1;
 	 int index = a[i];
@@ -33,8 +33,7 @@ int  insertsort(int a[], int n)
          while(a[j] > index && j >= 0)
 	 {
                a[j + 1] = a[j];
-               j--;                                                   
-	       i--;                       	  
+               j--;                                                               	  
          }
 	 a[j + 1] = index;
      }
