@@ -22,17 +22,26 @@ void output(int a[],int n)
 
 int  bubblesort(int a[],int n)
 {
+   	
      for(int i = 0;i < n;i++)
      {   
+	 bool flag = true;
 	 for(int j = 0;j < n - 1 - i;j++)
-	 {	 
+	 {
+		 
 	    if (a[j] > a[j + 1])
-	    {
+	    {   
+		bool flag = false;
 		int tam = a[j + 1];
 		a[j + 1] = a[j];
 		a[j] = tam;
+            		     
 	    }
          }
+	     
+	 if(flag){
+	    break; 
+	 }
     }
 }
 
