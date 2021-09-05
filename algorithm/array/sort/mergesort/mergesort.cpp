@@ -83,10 +83,6 @@ void mergeSort(int a[], int left, int right)
         // Tuong tu (l+r)/2
         int m = left + (right-left)/2;
     }
-    if (left < right)
-    {
-        // Tuong tu (l + r)/2
-        int m = left + (right - left)/2;
  
         // Goi hàm de quy tiep tuc chia dôi tung nua mang
         mergeSort(a , left, m);
