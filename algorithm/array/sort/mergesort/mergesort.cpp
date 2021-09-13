@@ -1,18 +1,22 @@
 #include<stdio.h>
 #include<iostream>
 using namespace std;
-void nhapmang(int a[], int n){
-	for(int j = 0;j < n; j++){
+void nhapmang(int a[], int n)
+{
+	for(int j = 0;j < n; j++)
+	{
 		cout<<" gia tri phan tu thu a["<<j<<"] la : ";
 		cin>>a[ j ];
 	}
 }
 
-void xuatmang(int a[],int n){
-	for (int i = 0;i < n; i++){
+void xuatmang(int a[],int n)
+{
+	for (int i = 0;i < n; i++)
+	{
 	    cout<<a[ i ];
 		cout<<" ";	
-		}
+	}
 }
 
 void merge(int a[], int left, int m, int right)
@@ -29,9 +33,6 @@ void merge(int a[], int left, int m, int right)
     for (i = 0; i < n1; i++)
 
         L[i] = a[left + i];
-
-        L[i] = a[left + i];
-
 	
     for (j = 0; j < n2; j++)
         R[j] = a[m + 1+ j];
@@ -80,16 +81,12 @@ void mergeSort(int a[], int left, int right)
     if (left < right)
     {
         // Tuong tu (l+r)/2
-        int m = left+(right-left)/2;
+        int m = left + (right-left)/2;
     }
-    if (left< right)
-    {
-        // Tuong tu (l+r)/2
-        int m = left +(right - left)/2;
  
         // Goi hàm de quy tiep tuc chia dôi tung nua mang
         mergeSort(a , left, m);
-        mergeSort(a , m+1, right);
+        mergeSort(a , m + 1, right);
  
         merge(a , left, m, right);
     }
@@ -102,7 +99,7 @@ int main()
     cout<<"nhap n : ";
     cin>>n;
     nhapmang (a , n);
-    mergeSort(a, 0, n-1 );
+    mergeSort(a, 0,n - 1);
     xuatmang( a, n);
 	
 }
