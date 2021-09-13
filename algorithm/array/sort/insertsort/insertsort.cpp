@@ -28,6 +28,7 @@ int  insertsort(int a[], int n)
          while(a[j] > index&&j >= 0){
                a[j + 1]=a[j];
                j--;
+               i--;
          }
 	 a[j + 1] = index;
      }
