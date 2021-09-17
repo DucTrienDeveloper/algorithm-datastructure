@@ -31,12 +31,12 @@ void heap(int a[], int n, int i)
      if (right < n && a[right] > a[max])
          max = right;
  
-<<<<<<< HEAD
+
      if (max != i) {             //gia tri lon nhat se dat o vi tri i
-=======
+
      if (max != i)            //gia tri lon nhat se dat o vi tri i
      {           
->>>>>>> 8615823de85e3728934e7dfecb94d593888fd897
+
          swap(a[i],a[max]);
  
          heap(a,n,max);
